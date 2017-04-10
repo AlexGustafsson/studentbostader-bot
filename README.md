@@ -11,6 +11,8 @@ ___Prerequisites: NodeJS, NPM___
 ```
 # Download the project and enter the directory
 git clone https://github.com/AlexGustafsson/studentbostader-bot.git && cd studentbostader-bot
+# Setup the project
+npm install
 # Start the bot engine
 npm start
 ```
