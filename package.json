@@ -1,0 +1,51 @@
+{
+  "name": "studentbostader-bot",
+  "version": "0.0.1",
+  "description": "A bot that scans Studentbostäder.se for new listings as well as 'bostad direkt' and notifies connected users",
+  "main": "index.js",
+  "dependencies": {
+    "botpress": "0.x",
+    "botpress-messenger": "^2.0.7",
+    "studentbostader-api": "0.0.3"
+  },
+  "scripts": {
+    "start": "botpress start",
+    "test": "xo"
+  },
+  "author": "Alex Gustafsson",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "xo": "^0.18.1"
+  },
+  "xo": {
+    "space": 2,
+    "ignores": [
+      "botfile.js"
+    ],
+    "rules": {
+      "curly": [
+        "error",
+        "multi-or-nest",
+        "consistent"
+      ],
+      "no-use-before-define": [
+        "error",
+        {
+          "classes": false
+        }
+      ],
+      "unicorn/catch-error-name": [
+        "error",
+        {
+          "name": "error"
+        }
+      ],
+      "dot-notation": [
+        "off"
+      ],
+      "quote-props": [
+        "off"
+      ]
+    }
+  }
+}
