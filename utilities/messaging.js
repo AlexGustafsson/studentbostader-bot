@@ -85,6 +85,8 @@ function notifySubscribers(botpress, accommodations) {
 function broadcast(botpress, message) {
   return botpress.db.kvs.get('subscriptions')
   .then(subscriptions => {
+    if (!subscriptions)
+      return;
     const ids = Object.keys(subscriptions);
     const activeIds = ids.filter(x => subscriptions[x]);
     const promises = activeIds.map(id => {

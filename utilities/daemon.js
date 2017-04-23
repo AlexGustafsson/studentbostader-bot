@@ -9,9 +9,17 @@ const {
   notifySubscribers
 } = require('./messaging');
 
-// TODO: Clean up code
-// TODO: Don't check during night etc.
+// When the crawler should start to update from server (to stop abuse)
+const START_UPTIME = 8;
+// WHen the crawler should end updating from server (to stop abuse)
+const END_UPTIME = 18;
+
 function startFetchingAccommodations(botpress) {
+  // Only update during active hours
+  const hour = new Date(Date.now).getHours();
+  if (hour < START_UPTIME || hour > END_UPTIME)
+    return;
+
   console.log('Starting fetching and broadcasting cycle');
 
   // Get current accommodations from server

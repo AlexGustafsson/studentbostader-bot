@@ -4,7 +4,11 @@ const utilities = require('../utilities').messaging;
 function list(botpress, event) {
   api.fetchAccommodations()
   .then(accommodations => {
-    utilities.sendAccommodations(botpress, event.user.id, accommodations);
+    // Only send accommodations if there are few available (to avoid spam)
+    if (accommodations.length < 3)
+      utilities.sendAccommodations(botpress, event.user.id, accommodations);
+    else
+      botpress.messenger.sendText(event.user.id, `Det finns ${accommodations.length} bostäder lediga. Se mer på hemsidan!`, {typing: true});
   })
   .catch(error => {
     console.error(error);

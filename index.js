@@ -32,7 +32,7 @@ module.exports = botpress => {
 
   botpress.hear(/fungera|funka/i, practicalities.bind(null, botpress));
 
-  botpress.hear(/lista|just nu|bostäder/i, list.bind(null, botpress));
+  botpress.hear(/lista|just nu|bostäder|boende|rum|korridor|lägenhet/i, list.bind(null, botpress));
 
   botpress.hear(/start/i, subscribe.bind(null, botpress));
 

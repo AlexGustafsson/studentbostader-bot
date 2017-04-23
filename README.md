@@ -33,7 +33,7 @@ npm start
 
 | action | description | regexp | example |
 | ------ | ----------- | ------ | ------- |
-| List accommodations | Sends three (or two) messages per available accommodation: a descriptive text message, an image (when available), a number to call and a direct link | /lista&#124;just nu&#124;bostäder/i | Vilka bostäder är lediga just nu? |
+| List accommodations | Sends three (or two) messages per available accommodation (less than three): a descriptive text message, an image (when available), a number to call and a direct link. | /lista&#124;just nu&#124;bostäder&#124;boende&#124;rum&#124;korridor&#124;lägenhet/i | Vilka bostäder är lediga just nu? |
 | Present usage | Sends messages containing usage instructions and example messages | /använd/i | Hur använder jag tjänsten? |
 | Present inner workings | Sends a message explaining how the service works | /fungera&#124;funka/i | Hur fungerar tjänsten? |
 | Start subscribing | Sends a confirmation message and adds the user to the subscription list. The user is then notified of new listings | /start/i| Start |

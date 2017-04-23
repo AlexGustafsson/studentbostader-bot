@@ -34,6 +34,7 @@ function setupDatabase(botpress) {
     if (!accommodations)
       botpress.db.kvs.set('accommodations', []);
   });
+  botpress.db.kvs.set('accommodations', []);
 }
 
 module.exports = {

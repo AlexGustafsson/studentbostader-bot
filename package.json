@@ -6,7 +6,7 @@
   "dependencies": {
     "botpress": "0.x",
     "botpress-messenger": "^2.0.7",
-    "studentbostader-api": "0.0.3"
+    "studentbostader-api": "0.0.4"
   },
   "scripts": {
     "start": "botpress start",
