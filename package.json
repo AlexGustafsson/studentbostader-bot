@@ -4,9 +4,9 @@
   "description": "A bot that scans Studentbostäder.se for new listings as well as 'bostad direkt' and notifies connected users",
   "main": "index.js",
   "dependencies": {
-    "botpress": "0.x",
-    "botpress-messenger": "^2.0.10",
-    "studentbostader-api": "0.0.4"
+    "botpress": "^0.2.5",
+    "botpress-messenger": "^2.2.9",
+    "studentbostader-api": "0.0.5"
   },
   "scripts": {
     "start": "botpress start",
